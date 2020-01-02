@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hujiangtao/node_demo/issues"
   },
-  "homepage": "https://github.com/hujiangtao/node_demo#readme"
+  "homepage": "https://github.com/hujiangtao/node_demo#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
 }
