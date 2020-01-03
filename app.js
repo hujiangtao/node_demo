@@ -1,17 +1,14 @@
 const Koa = require('koa');
+const Router = require('koa-router');
 
 const app = new Koa();
+const router = new Router();
 
-app.use((ctx, next) => {
-    console.log("一");
-    next();
-    console.log("二");
-});
+router.get('/classic/latest', (ctx, next)=>{
+    console.log("router.")
+    ctx.body = {key: 'classic router'};
+})
 
-app.use((ctx, next) => {
-    console.log("三");
-    next();
-    console.log("四");
-});
+app.use(router.routes());
 
 app.listen(3000, '192.168.16.116');
